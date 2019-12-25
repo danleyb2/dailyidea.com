@@ -11,14 +11,17 @@ export default (ctx, inject) => {
     static setItem(key, value) {
       return ctx.app.$storage.setUniversal(key, value)
     }
+
     // get item with the key
     static getItem(key) {
       return ctx.app.$storage.getUniversal(key)
     }
+
     // remove item with the key
     static removeItem(key) {
       return ctx.app.$storage.removeUniversal(key)
     }
+
     // clear out the storage
     static clear() {}
   }

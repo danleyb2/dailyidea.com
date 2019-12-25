@@ -28,10 +28,12 @@
               @click="toggleIdeaEditor"
             >
               My Idea &nbsp;
-              <v-icon left>mdi-pencil</v-icon>
+              <v-icon left>
+                mdi-pencil
+              </v-icon>
             </v-btn>
           </v-toolbar-title>
-          <v-spacer></v-spacer>
+          <v-spacer />
 
           <!-- Public Private Idea buttons -->
           <v-btn
@@ -57,9 +59,7 @@
 
           <!-- Bookmark button -->
 
-          <save-idea-bookmark
-            @savedStateChanged="onIdeaSaveStateChanged"
-          ></save-idea-bookmark>
+          <save-idea-bookmark @savedStateChanged="onIdeaSaveStateChanged" />
 
           <!-- Desktop Settings Menu -->
           <v-menu>
@@ -93,8 +93,7 @@
             data-vv-name="title"
             outlined
             label="Idea Title"
-          >
-          </v-textarea>
+          />
         </div>
 
         <!-- Metadata -->
@@ -108,7 +107,7 @@
 
         <!-- Description -->
         <div v-if="!ideaEditorVisible" class="ideaDescription">
-          <div v-html="idea.content"></div>
+          <div v-html="idea.content" />
         </div>
 
         <div v-else class="ideaEditor">
@@ -141,11 +140,12 @@
             color="primary"
             :loading="updatingIdea"
             @click="onSaveIdeaContent"
-            >Save</v-btn
           >
-          <v-btn text small color="error" @click="toggleIdeaEditor"
-            >Cancel</v-btn
-          >
+            Save
+          </v-btn>
+          <v-btn text small color="error" @click="toggleIdeaEditor">
+            Cancel
+          </v-btn>
         </div>
 
         <!-- Mobile Only - Engagements & Next Prev -->
@@ -226,7 +226,9 @@
             class="commentItem"
           >
             <div class="header">
-              <div class="commentUser">Name Surname</div>
+              <div class="commentUser">
+                Name Surname
+              </div>
               <div class="timing">
                 00
                 <v-btn
@@ -237,7 +239,9 @@
                   x-small
                   @click="onDeleteComment(item.commentId, item.body, index)"
                 >
-                  <v-icon color="red">fas fa-trash-alt</v-icon>
+                  <v-icon color="red">
+                    fas fa-trash-alt
+                  </v-icon>
                 </v-btn>
               </div>
             </div>
@@ -274,8 +278,9 @@
               :key="index"
               label
               class="tag"
-              >{{ item }}</v-chip
             >
+              {{ item }}
+            </v-chip>
           </div>
           <div v-else class="tagsEditor">
             <v-combobox
@@ -316,8 +321,7 @@
             solo
             label="Say something..."
             large
-          >
-          </v-text-field>
+          />
           <!-- Popip -ShowComment Dialogbox-->
           <div>
             <v-btn
@@ -325,11 +329,12 @@
               text
               icon
               :disabled="!currentComment || currentComment.length == 0"
-              flat
               :loading="showAddCommentLoader"
               @click="onAddComment()"
             >
-              <v-icon color="#d4bb10">fas fa-arrow-right</v-icon>
+              <v-icon color="#d4bb10">
+                fas fa-arrow-right
+              </v-icon>
             </v-btn>
           </div>
         </v-col>
@@ -337,24 +342,24 @@
     </div>
 
     <!-- Bottom snackbar message -->
-    <visual-notifier ref="notifier"></visual-notifier>
+    <visual-notifier ref="notifier" />
 
     <CommentWithoutLoginDialog
       :visible.sync="showCommentWithoutLoginDialog"
       @close="showCommentWithoutLoginDialog = false"
-    ></CommentWithoutLoginDialog>
+    />
 
     <SubsribeForPrivateIdeaDialog
       :visible.sync="showSubscribeForPrivateIdeaDialog"
       @close="showSubscribeForPrivateIdeaDialog = false"
-    ></SubsribeForPrivateIdeaDialog>
+    />
     <ShareIdeaByEmailDialog
       :idea-id="$route.params.ideaId"
       :idea-owner-id="$route.params.userId"
       :visible.sync="showEmailShareDialog"
       @success="onSharedIdeaOverEmail"
       @close="showEmailShareDialog = false"
-    ></ShareIdeaByEmailDialog>
+    />
   </Layout>
 </template>
 
@@ -660,6 +665,9 @@ export default {
         }
       }
       this.ideaTags = ideaTags
+    },
+    toggleLikeIdea () {
+
     },
     async loadComments() {
       const result = await this.$amplifyApi.graphql({

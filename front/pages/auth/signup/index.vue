@@ -35,7 +35,7 @@
             flat
             label="Enter name"
             prepend-inner-icon="fas fa-user"
-          ></v-text-field>
+          />
 
           <!-- Email Input Box -->
           <v-text-field
@@ -48,15 +48,15 @@
             flat
             label="Enter email"
             prepend-inner-icon="email"
-          ></v-text-field>
+          />
 
           <!-- Email Already Exists Message -->
           <div v-if="emailExistsMsg != ''" class="emailExistsMsg">
             {{ emailExistsMsg }}
             <div>
-              <v-btn to="/auth/login" text small color="#827C85"
-                >Login instead?</v-btn
-              >
+              <v-btn to="/auth/login" text small color="#827C85">
+                Login instead?
+              </v-btn>
             </div>
           </div>
 
@@ -67,15 +67,18 @@
             class="continueBtn"
             :loading="registerInProgress"
             @click="signup"
-            >Continue</v-btn
           >
+            Continue
+          </v-btn>
         </form>
 
         <!-- Login div at bottom -->
         <div class="accountExists">
           <div class="existsTitle">
             Already have an account?
-            <nuxt-link class="loginBtn" text to="/auth/login">Login</nuxt-link>
+            <nuxt-link class="loginBtn" text to="/auth/login">
+              Login
+            </nuxt-link>
           </div>
         </div>
       </v-flex>
@@ -98,7 +101,7 @@
         'background-image':
           'url(' + require('~/assets/images/signup/footer_background.png') + ')'
       }"
-    ></v-layout>
+    />
   </div>
 </template>
 
@@ -138,6 +141,9 @@ export default {
             name: this.name
           }
         })
+        await this.$amplifyApi.post('RequestLogin', '', {
+          body: { email: this.email }
+        })
 
         // Redirect to registeration success page
         this.$router.push({
@@ -145,10 +151,9 @@ export default {
           params: { email: this.email }
         })
       } catch (e) {
-        this.registerInProgress = false
-
         // Handle email already registered
         if (e.code && e.code === 'UsernameExistsException') {
+          this.registerInProgress = false
           this.emailExistsMsg = 'Sorry, email mentioned already exist.'
           return
         }

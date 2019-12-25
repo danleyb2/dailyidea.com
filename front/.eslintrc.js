@@ -14,12 +14,10 @@ module.exports = {
 
   extends: [
     '@nuxtjs',
-    '@vue/prettier',
+    "plugin:prettier/recommended",
+    "prettier/vue",
     'plugin:you-dont-need-lodash-underscore/compatible'
   ],
-
-  // required to lint *.vue files
-  plugins: ['prettier'],
 
   // add your custom rules here
   rules: {

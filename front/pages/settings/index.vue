@@ -16,7 +16,9 @@
             <v-icon>fas fa-pen</v-icon>
             Me
           </div>
-          <div class="metadata">{{ profileInfo.name }}</div>
+          <div class="metadata">
+            {{ profileInfo.name }}
+          </div>
         </nuxt-link>
 
         <nuxt-link class="settingsItem" :to="{ name: 'settings-email' }">
@@ -24,7 +26,9 @@
             <v-icon>fas fa-envelope</v-icon>
             Email
           </div>
-          <div class="metadata">All</div>
+          <div class="metadata">
+            All
+          </div>
         </nuxt-link>
 
         <div class="settingsItem">
@@ -32,7 +36,9 @@
             <v-icon>fas fa-user</v-icon>
             Account
           </div>
-          <div class="metadata">{{ userEmail }}</div>
+          <div class="metadata">
+            {{ userEmail }}
+          </div>
         </div>
         <!-- <div class="settingsItem">
 					<div class="settingsInfo">
@@ -49,7 +55,9 @@
 				</div> -->
         <div class="settingsItem" @click="signout()">
           <div class="settingsInfo"><v-icon>fas fa-ban</v-icon>Sign Out</div>
-          <div class="metadata">Sign Out Now</div>
+          <div class="metadata">
+            Sign Out Now
+          </div>
         </div>
       </v-container>
     </v-layout>

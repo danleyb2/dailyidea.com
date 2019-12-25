@@ -2,8 +2,12 @@
   <v-container>
     <v-layout row>
       <v-flex>
-        <p class="title">Daily Idea</p>
-        <p class="title">How To Respond To Emails!</p>
+        <p class="title">
+          Daily Idea
+        </p>
+        <p class="title">
+          How To Respond To Emails!
+        </p>
       </v-flex>
     </v-layout>
     <v-layout row>

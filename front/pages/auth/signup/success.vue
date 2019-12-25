@@ -28,13 +28,15 @@
         </div>
 
         <!-- Hero Message -->
-        <div class="heroMsg">Hooray!</div>
+        <div class="heroMsg">
+          Hooray!
+        </div>
 
         <!-- Hero Description -->
         <div class="heroDescription">
-          We've sent a magic link to <strong>{{ email }}</strong
-          >. Please check your inbox and click on the email confirmation
-          link in the email to get started!
+          We've sent a sign in link to <strong>{{ email }}</strong
+          >. Please check your inbox and click on the email confirmation link in
+          the email to get started!
         </div>
       </v-flex>
 
@@ -56,7 +58,7 @@
         'background-image':
           'url(' + require('~/assets/images/signup/footer_background.png') + ')'
       }"
-    ></v-layout>
+    />
   </div>
 </template>
 

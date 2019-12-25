@@ -3,7 +3,9 @@
     <v-container>
       <v-layout row>
         <v-flex>
-          <p class="dash-trailing">Get Started With A Free Account.</p>
+          <p class="dash-trailing">
+            Get Started With A Free Account.
+          </p>
         </v-flex>
       </v-layout>
       <v-layout row>
@@ -16,7 +18,9 @@
           <v-text-field v-model="email" label="Your Email Address" />
         </v-flex>
       </v-layout>
-      <v-btn @click="resend">Resend Confirmation Email</v-btn>
+      <v-btn @click="resend">
+        Resend Confirmation Email
+      </v-btn>
     </v-container>
   </v-form>
 </template>

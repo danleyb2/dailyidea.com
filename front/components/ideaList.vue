@@ -15,11 +15,13 @@
             })
           "
         >
-          <div class="ideaTitle">{{ idea.title }}</div>
+          <div class="ideaTitle">
+            {{ idea.title }}
+          </div>
 
           <!-- Desktop only - idea description -->
           <div class="ideaDescrpition" hidden-sm-and-down>
-            <div v-html="idea.content"></div>
+            <div v-html="idea.content" />
           </div>
 
           <div class="engagement">
@@ -32,7 +34,9 @@
               {{ idea.commentsCount }}
             </div>
 
-            <div class="timing">{{ idea.createdDate | toRelativeDate }}</div>
+            <div class="timing">
+              {{ idea.createdDate | toRelativeDate }}
+            </div>
           </div>
         </div>
       </v-flex>
@@ -45,7 +49,7 @@
       </div>
 
       <!-- No Idea MEssage -->
-      <div class="text" v-html="noIdeaMessage"></div>
+      <div class="text" v-html="noIdeaMessage" />
 
       <!-- Add idea arrow - desktop only -->
       <v-layout

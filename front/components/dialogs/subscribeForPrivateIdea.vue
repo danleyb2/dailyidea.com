@@ -7,9 +7,9 @@
   >
     <!-- Popup Header -->
     <div class="header">
-      <v-icon text class="cancelIcon" size="20" @click="$emit('close')"
-        >fas fa-times</v-icon
-      >
+      <v-icon text class="cancelIcon" size="20" @click="$emit('close')">
+        fas fa-times
+      </v-icon>
     </div>
 
     <!-- Popup body -->

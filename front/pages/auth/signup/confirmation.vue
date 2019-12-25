@@ -23,7 +23,9 @@
         </div>
 
         <!-- Hero Message -->
-        <div class="heroMsg">Welcome!</div>
+        <div class="heroMsg">
+          Welcome!
+        </div>
 
         <!-- Hero Description -->
         <div class="heroDescription">
@@ -33,12 +35,12 @@
 
         <!-- Action Buttons -->
         <div class="actionButtonContainer">
-          <v-btn large class="actionBtn" to="/ideas/create"
-            >Save a new idea</v-btn
-          >
-          <v-btn large dark class="actionBtn" to="/ideas/all"
-            >browse public ideas</v-btn
-          >
+          <v-btn large class="actionBtn" to="/ideas/create">
+            Save a new idea
+          </v-btn>
+          <v-btn large dark class="actionBtn" to="/ideas/all">
+            browse public ideas
+          </v-btn>
         </div>
       </v-flex>
 
@@ -60,7 +62,7 @@
         'background-image':
           'url(' + require('~/assets/images/signup/footer_background.png') + ')'
       }"
-    ></v-layout>
+    />
   </div>
 </template>
 

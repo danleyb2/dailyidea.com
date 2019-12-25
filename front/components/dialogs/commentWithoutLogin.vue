@@ -7,9 +7,9 @@
   >
     <!-- Popup Header -->
     <div class="header">
-      <v-icon text class="cancelIcon" size="20" @click="closeDialog()"
-        >fas fa-times</v-icon
-      >
+      <v-icon text class="cancelIcon" size="20" @click="closeDialog()">
+        fas fa-times
+      </v-icon>
     </div>
 
     <!-- Popup body -->
@@ -37,7 +37,7 @@
               :error-messages="errors.collect('email')"
               data-vv-name="email"
               label="Enter email"
-            ></v-text-field>
+            />
           </div>
 
           <!-- Submit Buttons -->
@@ -47,8 +47,9 @@
               type="submit"
               class="specialButton shareBtn"
               form="comment-on-idea-without-login-form"
-              >SEND</v-btn
             >
+              SEND
+            </v-btn>
           </div>
         </form>
       </div>
@@ -64,7 +65,9 @@
 
         <!-- Submit Buttons -->
         <div class="specialButton submitBtn">
-          <v-btn @click="closeDialog()">OKAY</v-btn>
+          <v-btn @click="closeDialog()">
+            OKAY
+          </v-btn>
         </div>
       </div>
     </div>

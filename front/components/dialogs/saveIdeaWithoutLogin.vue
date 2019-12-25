@@ -7,9 +7,9 @@
   >
     <!-- Close Button -->
     <div class="closeBtn">
-      <v-icon text class="cancelIcon" size="20" @click="closeDialog()"
-        >fas fa-times</v-icon
-      >
+      <v-icon text class="cancelIcon" size="20" @click="closeDialog()">
+        fas fa-times
+      </v-icon>
     </div>
 
     <div class="inputMode">
@@ -23,7 +23,9 @@
           />
         </v-col>
         <v-col cols="12" sm="8">
-          <div class="title">Save Idea</div>
+          <div class="title">
+            Save Idea
+          </div>
           <div class="description">
             To save this idea and get back to it at any time, you need to create
             an account. Don't worry, all we need is your email.
@@ -44,8 +46,9 @@
               type="submit"
               class="specialButton shareBtn"
               form="save-idea-without-login-form"
-              >Log in</v-btn
             >
+              Log in
+            </v-btn>
           </router-link>
           <router-link
             to="/auth/signup"
@@ -55,8 +58,9 @@
               type="submit"
               class="specialButton shareBtn"
               form="save-idea-without-login-form"
-              >CREATE ACCOUNT</v-btn
             >
+              CREATE ACCOUNT
+            </v-btn>
           </router-link>
         </div>
       </form>

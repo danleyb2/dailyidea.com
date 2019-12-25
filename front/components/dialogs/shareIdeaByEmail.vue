@@ -7,15 +7,19 @@
     max-width="400px"
   >
     <div class="closeBtn">
-      <v-icon text class="cancelIcon" size="18" @click="closeDialog"
-        >fas fa-times</v-icon
-      >
+      <v-icon text class="cancelIcon" size="18" @click="closeDialog">
+        fas fa-times
+      </v-icon>
     </div>
 
     <!-- Popup Header -->
     <div class="header">
-      <v-icon text class="shareIcon" size="60">fas fa-envelope</v-icon>
-      <div class="headlineText">Share Idea by Email</div>
+      <v-icon text class="shareIcon" size="60">
+        fas fa-envelope
+      </v-icon>
+      <div class="headlineText">
+        Share Idea by Email
+      </div>
     </div>
 
     <form id="share-idea-without-login-form" @submit.prevent="sendEmail">
@@ -26,8 +30,7 @@
         data-vv-name="name"
         label=" Your name"
         outlined
-      >
-      </v-text-field>
+      />
       <v-text-field
         v-model="form.friendName"
         v-validate="'required|max:100'"
@@ -35,7 +38,7 @@
         data-vv-name="friend name"
         label=" Your Friend's name"
         outlined
-      ></v-text-field>
+      />
       <v-text-field
         v-model="form.friendEmail"
         v-validate="'required|email|max:100'"
@@ -44,19 +47,22 @@
         data-vv-name="email"
         label="Your Friend's email "
         outlined
-      ></v-text-field>
+      />
 
       <!-- Submit Buttons -->
       <div class="btnContainer">
-        <v-btn class="cancleBtn" text @click="closeDialog">Cancel</v-btn>
+        <v-btn class="cancleBtn" text @click="closeDialog">
+          Cancel
+        </v-btn>
         <v-btn
           type="submit"
           class="specialButton shareBtn"
           :loading="sendingEmail"
           form="share-idea-without-login-form"
           @click="sendEmail"
-          >Share</v-btn
         >
+          Share
+        </v-btn>
       </div>
     </form>
   </v-dialog>

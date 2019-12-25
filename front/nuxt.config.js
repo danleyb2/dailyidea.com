@@ -111,7 +111,7 @@ module.exports = {
   build: {
     loaders: {
       scss: {
-        prependData: `@import "~@/assets/style/variables.scss";`
+        prependData: '@import "~@/assets/style/variables.scss";'
       },
       vue: {
         transformAssetUrls: {
@@ -136,16 +136,17 @@ module.exports = {
       ? `https://${process.env.S3_DOMAIN}/`
       : undefined,
     cache: true,
+    extractCSS: true,
     modern: true,
     extend(config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          include: path.join(__dirname)
-        })
+        // config.module.rules.push({
+        //   enforce: 'pre',
+        //   test: /\.(js|vue)$/,
+        //   loader: 'eslint-loader',
+        //   include: path.join(__dirname)
+        // })
       }
     }
   }

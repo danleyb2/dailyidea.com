@@ -34,8 +34,9 @@
               class="signupButton"
               :to="{ name: 'auth-signup' }"
               color="primary"
-              >Sign up Now</v-btn
             >
+              Sign up Now
+            </v-btn>
           </v-flex>
 
           <!-- Desktop Only - Right Side -->
@@ -78,12 +79,14 @@
           >
             <v-flex v-for="idea in ideas" :key="idea.ideaId" md4 lg4>
               <v-card color="white" class="review">
-                <div v-html="idea.content"></div>
+                <div v-html="idea.content" />
                 <!-- User Icon -->
                 <div class="reviewerInfo">
-                  <v-icon class="userIcon">fa-user-circle</v-icon>by Name
-                  Surname
-                  <div class="reviewTime">{{ idea.createdDate | toRelativeDate }}</div>
+                  <v-icon class="userIcon"> fa-user-circle </v-icon>by Name >by
+                  >by Name >by Name Surname
+                  <div class="reviewTime">
+                    {{ idea.createdDate | toRelativeDate }}
+                  </div>
                 </div>
               </v-card>
             </v-flex>
@@ -121,11 +124,14 @@
               :key="idea.ideaId"
               class="review"
             >
-              <div v-html="idea.content"></div>
+              <div v-html="idea.content" />
               <!-- User Icon -->
               <div class="reviewerInfo">
-                <v-icon class="userIcon">fa-user-circle</v-icon>by Name Surname
-                <div class="reviewTime">1h ago</div>
+                <v-icon class="userIcon"> fa-user-circle </v-icon>by Name >by
+                >by Name >by >by Name >by Name Surname
+                <div class="reviewTime">
+                  1h ago
+                </div>
               </div>
             </v-carousel-item>
           </v-carousel>
@@ -151,21 +157,29 @@
             </v-flex>
             <!-- Right side description -->
             <v-flex class="rightSideDescription" xs5 md6>
-              <div class="ttle">How it works</div>
-              <div class="subTitle">Oh, it's easy!</div>
+              <div class="ttle">
+                How it works
+              </div>
+              <div class="subTitle">
+                Oh, it's easy!
+              </div>
               <img class="dotsImg" src="~/assets/images/home/dots.png" />
               <div class="description">
                 We'll send you an email every day with a reminder for you to
                 submit an idea. Just hit reply, and you'll never again.
               </div>
-              <v-btn class="buttn" dark outlined>More</v-btn>
+              <v-btn class="buttn" dark outlined>
+                More
+              </v-btn>
             </v-flex>
           </v-layout>
         </v-container>
 
         <!-- Mobile View -->
         <v-container class="mobileView" grid-list-md hidden-md-and-up>
-          <div class="ttle">How it works</div>
+          <div class="ttle">
+            How it works
+          </div>
           <div class="subTitle">
             Oh, it's easy!
             <img class="dotsImg" src="~/assets/images/home/dots.png" />
@@ -185,17 +199,21 @@
             <img class="img2" src="~/assets/images/home/mail_work_mobile.png" />
             <img class="img3" src="~/assets/images/person_with_phone.png" />
           </div>
-          <v-btn class="buttn" dark outlined>More</v-btn>
+          <v-btn class="buttn" dark outlined>
+            More
+          </v-btn>
         </v-container>
 
         <!-- Footer -->
         <div class="homeFooter">
           <v-layout row wrap>
-            <v-flex md10 lg10 hidden-sm-and-down>&nbsp;</v-flex>
+            <v-flex md10 lg10 hidden-sm-and-down>
+              &nbsp;
+            </v-flex>
             <v-flex md2 lg2>
-              <i class="fab fa-instagram"></i>
-              <i class="fab fa-twitter"></i>
-              <i class="fab fa-facebook-f"></i>
+              <i class="fab fa-instagram" />
+              <i class="fab fa-twitter" />
+              <i class="fab fa-facebook-f" />
             </v-flex>
           </v-layout>
         </div>
@@ -225,8 +243,7 @@ export default {
       ideas: result.items
     }
   },
-  created() {
-  },
+  created() {},
   methods: {}
 }
 </script>

@@ -50,9 +50,9 @@
           <div v-if="emailNotFoundMsg != ''" class="emailNotFoundMsg">
             {{ emailNotFoundMsg }}
             <div>
-              <v-btn to="/auth/signup" text small color="#827C85"
-                >Create an account?</v-btn
-              >
+              <v-btn to="/auth/signup" text small color="#827C85">
+                Create an account?
+              </v-btn>
             </div>
           </div>
 
@@ -63,17 +63,18 @@
             class="loginBtn"
             :loading="logingUser"
             @click.stop.prevent="login"
-            >Log In</v-btn
           >
+            Log In
+          </v-btn>
         </v-form>
 
         <!-- Create account div at bottom -->
         <div class="createAccountDiv">
           <div class="existsTitle">
             Don't have an account yet?
-            <nuxt-link class="signupBtn" text to="/auth/signup"
-              >Create Account</nuxt-link
-            >
+            <nuxt-link class="signupBtn" text to="/auth/signup">
+              Create Account
+            </nuxt-link>
           </div>
         </div>
       </v-flex>
@@ -96,7 +97,7 @@
         'background-image':
           'url(' + require('~/assets/images/signup/footer_background.png') + ')'
       }"
-    ></v-layout>
+    />
   </div>
 </template>
 

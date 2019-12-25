@@ -11,7 +11,9 @@
     <v-layout id="ideaListPage">
       <!-- Title Section -->
       <div v-if="ideas && ideas.length > 0" class="titleDiv">
-        <v-layout class="titleText" hidden-sm-and-down>MY IDEAS</v-layout>
+        <v-layout class="titleText" hidden-sm-and-down>
+          MY IDEAS
+        </v-layout>
       </div>
 
       <!-- Idea List -->
@@ -36,9 +38,11 @@
                 })
               "
             >
-              <div class="ideaTitle">{{ idea.title }}</div>
+              <div class="ideaTitle">
+                {{ idea.title }}
+              </div>
               <div class=" ideaDescrpition">
-                <v-layout v-html="idea.content"> </v-layout>
+                <v-layout v-html="idea.content" />
               </div>
               <div class="engagement">
                 <div class="ups">
@@ -139,8 +143,7 @@ export default {
     snackbarColor: 'success',
     loadingIdea: false
   }),
-  created() {
-  },
+  created() {},
 
   methods: {
     async loadMoreIdea() {

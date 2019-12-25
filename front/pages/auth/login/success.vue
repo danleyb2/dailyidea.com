@@ -28,7 +28,9 @@
         </div>
 
         <!-- Hero Message -->
-        <div class="heroMsg">Welcome Back!</div>
+        <div class="heroMsg">
+          Welcome Back!
+        </div>
 
         <!-- Hero Description -->
         <div class="heroDescription">
@@ -59,9 +61,8 @@
         'background-image':
           'url(' + require('~/assets/images/signup/footer_background.png') + ')'
       }"
-    ></v-layout>
-    <resend-auth-email-dialog ref="resend-auth-email-dialog">
-    </resend-auth-email-dialog>
+    />
+    <resend-auth-email-dialog ref="resend-auth-email-dialog" />
   </div>
 </template>
 
@@ -80,7 +81,7 @@ export default {
   },
   methods: {
     showPopup() {
-        this.$refs['resend-auth-email-dialog'].open(this.email)
+      this.$refs['resend-auth-email-dialog'].open(this.email)
     }
   }
 }

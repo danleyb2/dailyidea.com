@@ -26,7 +26,9 @@
         <img class="logoText" src="~/assets/images/logo_text.png" />
 
         <!-- Hero Message -->
-        <div class="heroMsg">Yay !</div>
+        <div class="heroMsg">
+          Yay !
+        </div>
 
         <!-- Hero Description -->
         <div class="heroDescription">
@@ -39,7 +41,9 @@
         </div>
 
         <!-- Continue Button -->
-        <v-btn large class="okBtn">OK</v-btn>
+        <v-btn large class="okBtn">
+          OK
+        </v-btn>
       </v-flex>
 
       <v-flex class="rightImgContainer" hidden-sm-and-down>
@@ -60,7 +64,7 @@
         'background-image':
           'url(' + require('~/assets/images/signup/footer_background.png') + ')'
       }"
-    ></v-layout>
+    />
   </div>
 </template>
 

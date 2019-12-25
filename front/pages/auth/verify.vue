@@ -6,7 +6,7 @@
       :active="progressBarActive"
       :height="2"
       absolute
-    ></v-progress-linear>
+    />
     <div class="verify-message">
       <div class="verify-message__image-container">
         <div class="verify-message__image-container__image-wrapper inactive">

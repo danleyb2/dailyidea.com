@@ -8,14 +8,16 @@
     max-width="400px"
   >
     <div class="closeBtn">
-      <v-icon text class="cancelIcon" size="18" @click="closeDialog"
-        >fas fa-times</v-icon
-      >
+      <v-icon text class="cancelIcon" size="18" @click="closeDialog">
+        fas fa-times
+      </v-icon>
     </div>
 
     <!-- Popup Header -->
     <div class="header">
-      <v-icon text class="shareIcon" size="60">fas fa-envelope</v-icon>
+      <v-icon text class="shareIcon" size="60">
+        fas fa-envelope
+      </v-icon>
     </div>
     <div class="emailSentMessage">
       <span v-if="sendingEmail"
@@ -32,9 +34,9 @@
     <form id="share-idea-without-login-form" @submit.prevent="sendEmail">
       <!-- Submit Buttons -->
       <div class="btnContainer">
-        <v-btn class="cancelBtn" text @click="backToLogIn"
-          >Back to Log In</v-btn
-        >
+        <v-btn class="cancelBtn" text @click="backToLogIn">
+          Back to Log In
+        </v-btn>
         <v-btn
           type="submit"
           class="specialButton shareBtn"
@@ -42,8 +44,9 @@
           :disabled="sendingEmail || blockSendAgainTime > 0"
           form="share-idea-without-login-form"
           @click="sendEmail"
-          >{{ sendAgainText }}</v-btn
         >
+          {{ sendAgainText }}
+        </v-btn>
       </div>
     </form>
   </v-dialog>

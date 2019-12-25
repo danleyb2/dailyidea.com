@@ -8,7 +8,9 @@
     <v-layout id="ideaListPage">
       <!-- Title Section -->
       <div class="titleDiv">
-        <v-layout class="titleText" hidden-sm-and-down>ALL IDEAS</v-layout>
+        <v-layout class="titleText" hidden-sm-and-down>
+          ALL IDEAS
+        </v-layout>
       </div>
 
       <!-- Sort Button -->
@@ -17,7 +19,7 @@
       </div>
 
       <!-- Idea List -->
-      <IdeaListComponent :ideas="ideas"></IdeaListComponent>
+      <IdeaListComponent :ideas="ideas" />
 
       <!-- LodaMore Button -->
       <div v-if="ideas && ideas.length > 0" class="loadMoreBtn">
@@ -47,7 +49,6 @@
 </template>
 
 <script>
-
 import getPublicIdeas from '~/graphql/query/getPublicIdeas'
 import Layout from '@/components/layout/Layout'
 import IdeaListComponent from '@/components/ideaList'
@@ -89,8 +90,7 @@ export default {
     nextToken: null,
     pagesize: pageSize
   }),
-  created() {
-  },
+  created() {},
 
   methods: {
     async loadMoreIdea() {

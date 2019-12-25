@@ -5,7 +5,7 @@
       <!-- desktop view -->
 
       <v-row class="first-section">
-        <v-col cols="12" xl="1" class="hidden-lg-and-down"></v-col>
+        <v-col cols="12" xl="1" class="hidden-lg-and-down" />
         <v-col
           md="5"
           xl="4"
@@ -13,7 +13,9 @@
           class="first-section__future-list-container"
         >
           <div class="first-section__future-list-container__feature-list">
-            <div class="firstHeader">Every Day, Log An Idea</div>
+            <div class="firstHeader">
+              Every Day, Log An Idea
+            </div>
             <div class="subHeader">
               A project idea, a startup idea, a work idea
             </div>
@@ -31,15 +33,16 @@
                 class="first-section__signup-button"
                 :to="{ name: 'auth-signup' }"
                 color="#326bde"
-                >Sign Up
+              >
+                Sign Up
               </v-btn>
             </div>
           </div>
         </v-col>
         <v-col md="7" xl="6" cols="12">
-          <div id="lampWomanImage"></div>
+          <div id="lampWomanImage" />
         </v-col>
-        <v-col cols="12" xl="1" class="hidden-lg-and-down"></v-col>
+        <v-col cols="12" xl="1" class="hidden-lg-and-down" />
       </v-row>
 
       <section class="idea-section">
@@ -48,7 +51,7 @@
         </div>
 
         <v-row>
-          <v-col cols="12" xl="1" class="hidden-lg-and-down"></v-col>
+          <v-col cols="12" xl="1" class="hidden-lg-and-down" />
           <v-col cols="12" xl="10">
             <v-row class="reviews">
               <v-col v-for="idea in ideas" :key="idea.ideaId" cols="12" md="4">
@@ -57,8 +60,10 @@
                   class="reviews__review"
                   @click="onIdeaClick(idea)"
                 >
-                  <div><strong>{{idea.title}}</strong></div>
-                  <div v-html="idea.content"></div>
+                  <div>
+                    <strong>{{ idea.title }}</strong>
+                  </div>
+                  <div v-html="idea.content" />
                   <!-- User Icon -->
                   <div class="reviews__review__info">
                     <div class="reviews__review__info__detail">
@@ -87,7 +92,7 @@
               </v-col>
             </v-row>
           </v-col>
-          <v-col cols="12" xl="1" class="hidden-lg-and-down"></v-col>
+          <v-col cols="12" xl="1" class="hidden-lg-and-down" />
         </v-row>
 
         <!-- Signup Button -->
@@ -98,14 +103,15 @@
             rounded
             :to="{ name: 'ideas-all' }"
             class="idea-section__browse-more__btn"
-            >See More
+          >
+            See More
           </v-btn>
         </div>
       </section>
 
       <section class="last-section">
         <v-row>
-          <v-col cols="12" xl="1" class="hidden-lg-and-down"></v-col>
+          <v-col cols="12" xl="1" class="hidden-lg-and-down" />
           <v-col class="last-section__left-side" cols="12" md="6" xl="5">
             <img
               class="person-with-phone"
@@ -119,8 +125,12 @@
           </v-col>
           <v-col cols="12" md="6" xl="5">
             <div class="last-section__feature-list">
-              <div class="firstHeader">How Does It Work?</div>
-              <div class="subHeader">Hint: It's super easy!</div>
+              <div class="firstHeader">
+                How Does It Work?
+              </div>
+              <div class="subHeader">
+                Hint: It's super easy!
+              </div>
 
               <div class="descriptionSection">
                 <p>
@@ -142,11 +152,12 @@
                 to="/auth/signup"
                 class="last-section__feature-list__view-more-btn"
                 color="primary"
-                >Sign Up
+              >
+                Sign Up
               </v-btn>
             </div>
           </v-col>
-          <v-col cols="0" xl="1" class="hidden-lg-and-down"></v-col>
+          <v-col cols="0" xl="1" class="hidden-lg-and-down" />
         </v-row>
       </section>
 
@@ -199,8 +210,7 @@ export default {
       return require('~/assets/images/homeImage.png')
     }
   },
-  created() {
-  },
+  created() {},
   methods: {
     onIdeaClick(idea) {
       this.$router.push({

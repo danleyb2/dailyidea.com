@@ -8,7 +8,9 @@
     <v-layout id="ideaListPage">
       <!-- Title Section -->
       <div class="titleDiv">
-        <v-layout class="titleText" hidden-sm-and-down>MY IDEAS</v-layout>
+        <v-layout class="titleText" hidden-sm-and-down>
+          MY IDEAS
+        </v-layout>
       </div>
 
       <!-- Sort Button -->
@@ -17,10 +19,7 @@
       </div>
 
       <!-- Idea List -->
-      <IdeaListComponent
-        :ideas="ideas"
-        :show-arrow-to-add-button="true"
-      ></IdeaListComponent>
+      <IdeaListComponent :ideas="ideas" :show-arrow-to-add-button="true" />
 
       <!-- LodaMore Button -->
       <div v-if="ideas && ideas.length > 0" class="loadMoreBtn">
@@ -89,8 +88,7 @@ export default {
     snackbarColor: 'success',
     loadingIdea: false
   }),
-  created() {
-  },
+  created() {},
 
   methods: {
     async loadMoreIdea() {

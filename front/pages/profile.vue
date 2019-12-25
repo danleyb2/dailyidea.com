@@ -6,7 +6,7 @@
     }"
   >
     <v-layout id="profilePage">
-      <visual-notifier ref="notifier"></visual-notifier>
+      <visual-notifier ref="notifier" />
       <img class="backgroundLamp" src="~/assets/images/light_gray_lamp.png" />
 
       <v-layout row wrap>
@@ -33,7 +33,7 @@
                     dense
                     autofocus
                     placeholder="Yor Name"
-                  ></v-text-field>
+                  />
                 </v-form>
               </v-row>
             </div>
@@ -67,17 +67,20 @@
               maxlength="1000"
               placeholder="Tell few words about yourself"
               :disabled="savingChanges"
-            ></v-textarea>
+            />
           </v-layout>
           <v-row v-if="editProfileInfoMode" class="hidden-md-and-up">
             <v-col class="text-right">
-              <v-btn outlined @click="cancelEditProfileInfo">Cancel</v-btn>
+              <v-btn outlined @click="cancelEditProfileInfo">
+                Cancel
+              </v-btn>
               <v-btn
                 :disabled="!allowSave"
                 :loading="savingChanges"
                 @click="saveProfileChanges"
-                >Save</v-btn
               >
+                Save
+              </v-btn>
             </v-col>
           </v-row>
 
@@ -85,20 +88,32 @@
           <v-layout class="boxContainer" row>
             <v-flex xs4 sm4 md4 lg4 xl4>
               <div class="box first">
-                <div class="number">{{ userData.ideasCreated }}</div>
-                <div class="text">Ideas</div>
+                <div class="number">
+                  {{ userData.ideasCreated }}
+                </div>
+                <div class="text">
+                  Ideas
+                </div>
               </div>
             </v-flex>
             <v-flex xs4 sm4 md4 lg4 xl4>
               <div class="box">
-                <div class="number">{{ userData.followersCount }}</div>
-                <div class="text">Followers</div>
+                <div class="number">
+                  {{ userData.followersCount }}
+                </div>
+                <div class="text">
+                  Followers
+                </div>
               </div>
             </v-flex>
             <v-flex xs4 sm4 md4 lg4 xl4>
               <div class="box last">
-                <div class="number">{{ userData.followeesCount }}</div>
-                <div class="text">Following</div>
+                <div class="number">
+                  {{ userData.followeesCount }}
+                </div>
+                <div class="text">
+                  Following
+                </div>
               </div>
             </v-flex>
           </v-layout>
@@ -116,18 +131,21 @@
                     maxlength="1000"
                     :disabled="savingChanges"
                     placeholder="Tell few words about yourself"
-                  ></v-textarea>
+                  />
                 </v-col>
               </v-row>
               <v-row v-if="editProfileInfoMode">
                 <v-col class="text-right">
-                  <v-btn outlined @click="cancelEditProfileInfo">Cancel</v-btn>
+                  <v-btn outlined @click="cancelEditProfileInfo">
+                    Cancel
+                  </v-btn>
                   <v-btn
                     :disabled="!allowSave"
                     :loading="savingChanges"
                     @click="saveProfileChanges"
-                    >Save</v-btn
                   >
+                    Save
+                  </v-btn>
                 </v-col>
               </v-row>
             </v-col>
@@ -135,12 +153,24 @@
 
           <!-- Tags -->
           <div class="tagsContainer">
-            <v-chip label class="tag">web</v-chip>
-            <v-chip label class="tag">illustration</v-chip>
-            <v-chip label class="tag">graphics</v-chip>
-            <v-chip label class="tag">ui</v-chip>
-            <v-chip label class="tag">adobe</v-chip>
-            <v-chip label class="tag">interface</v-chip>
+            <v-chip label class="tag">
+              web
+            </v-chip>
+            <v-chip label class="tag">
+              illustration
+            </v-chip>
+            <v-chip label class="tag">
+              graphics
+            </v-chip>
+            <v-chip label class="tag">
+              ui
+            </v-chip>
+            <v-chip label class="tag">
+              adobe
+            </v-chip>
+            <v-chip label class="tag">
+              interface
+            </v-chip>
           </div>
         </v-flex>
 
@@ -164,7 +194,9 @@
                 <img class="logoIcon" src="~/assets/images/comments.png" />
                 --
               </div>
-              <div class="timing">{{ ideas.createdDate | toRelativeDate }}</div>
+              <div class="timing">
+                {{ ideas.createdDate | toRelativeDate }}
+              </div>
             </div>
           </div>
 

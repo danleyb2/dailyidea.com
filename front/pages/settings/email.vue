@@ -28,9 +28,13 @@
               class="swithBtn"
               inset
               :label="``"
-            ></v-switch>
-            <div v-if="ideaReminders" class="statusLabel active">ON</div>
-            <div v-if="!ideaReminders" class="statusLabel">OFF</div>
+            />
+            <div v-if="ideaReminders" class="statusLabel active">
+              ON
+            </div>
+            <div v-if="!ideaReminders" class="statusLabel">
+              OFF
+            </div>
           </div>
         </div>
 
@@ -47,9 +51,13 @@
               class="swithBtn"
               inset
               :label="``"
-            ></v-switch>
-            <div v-if="hotStreaks" class="statusLabel active">ON</div>
-            <div v-if="!hotStreaks" class="statusLabel">OFF</div>
+            />
+            <div v-if="hotStreaks" class="statusLabel active">
+              ON
+            </div>
+            <div v-if="!hotStreaks" class="statusLabel">
+              OFF
+            </div>
           </div>
         </div>
 
@@ -66,9 +74,13 @@
               class="swithBtn"
               inset
               :label="``"
-            ></v-switch>
-            <div v-if="dailyDigests" class="statusLabel active">ON</div>
-            <div v-if="!dailyDigests" class="statusLabel">OFF</div>
+            />
+            <div v-if="dailyDigests" class="statusLabel active">
+              ON
+            </div>
+            <div v-if="!dailyDigests" class="statusLabel">
+              OFF
+            </div>
           </div>
         </div>
 
@@ -85,9 +97,13 @@
               class="swithBtn"
               inset
               :label="``"
-            ></v-switch>
-            <div v-if="weeklyDigests" class="statusLabel active">ON</div>
-            <div v-if="!weeklyDigests" class="statusLabel">OFF</div>
+            />
+            <div v-if="weeklyDigests" class="statusLabel active">
+              ON
+            </div>
+            <div v-if="!weeklyDigests" class="statusLabel">
+              OFF
+            </div>
           </div>
         </div>
       </v-container>

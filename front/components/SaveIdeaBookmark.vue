@@ -9,14 +9,16 @@
       color="white"
       :class="{ hidden: isLiked, 'plus-icon': true }"
     >
-      fa fa-plus</v-icon
-    >
-    <v-icon v-if="isLoading" color="white"> fas fa-circle-notch fa-spin</v-icon>
-    <div class="save-idea-bookmark__inner-triangle"></div>
+      fa fa-plus
+    </v-icon>
+    <v-icon v-if="isLoading" color="white">
+      fas fa-circle-notch fa-spin
+    </v-icon>
+    <div class="save-idea-bookmark__inner-triangle" />
     <SaveIdeaWithoutLoginDialog
       :visible.sync="showSaveWithoutLoginDialog"
       @close="showSaveWithoutLoginDialog = false"
-    ></SaveIdeaWithoutLoginDialog>
+    />
   </div>
 </template>
 

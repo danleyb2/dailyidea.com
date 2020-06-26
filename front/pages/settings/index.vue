@@ -1,11 +1,11 @@
 <template>
   <layout>
     <div class="settings-page">
-      <v-img
-        src="~/assets/images/light_gray_lamp.png"
-        height="100"
-        contain
-      ></v-img>
+      <!--<v-img-->
+        <!--src="~/assets/images/light_gray_lamp.png"-->
+        <!--height="100"-->
+        <!--contain-->
+      <!--&gt;</v-img>-->
       <div class="settings-page__title">
         Settings
       </div>

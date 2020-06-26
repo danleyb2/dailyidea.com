@@ -5,7 +5,7 @@
     <v-container fluid style="padding: 0">
       <v-row style="padding: 0 8px">
         <template v-if="!searchIdeaMode">
-          <v-col style="padding: 0" cols="10">
+          <v-col style="padding: 0;display: flex;" cols="12">
             <v-btn
               small
               class="lightPinkButton"
@@ -18,7 +18,7 @@
             <nuxt-link
               class="logoLink"
               :to="{ name: 'ideas-me' }"
-              style="text-decoration: none; vertical-align: top"
+              style="text-decoration: none; vertical-align: top;margin-left: auto;margin-right: auto;"
             >
               <img
                 class="logoIcon"
@@ -32,7 +32,6 @@
               />
             </nuxt-link>
           </v-col>
-          <v-col style="padding: 0; text-align: right"></v-col>
         </template>
         <v-col v-else cols="12" style="padding: 0">
           <v-text-field

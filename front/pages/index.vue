@@ -151,7 +151,6 @@
                 rounded
                 to="/auth/signup"
                 class="last-section__feature-list__view-more-btn"
-                color="primary"
                 >Sign Up
               </v-btn>
             </div>

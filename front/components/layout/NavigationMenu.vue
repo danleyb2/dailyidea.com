@@ -9,21 +9,19 @@
       <!-- Back button -->
 
       <div class="logo-container">
+        <v-icon class="logo-container__icon" @click.native="close">fa-times</v-icon>
+        <span class="logo-container__text">D A I L Y I D E A</span>
         <img
           src="~/assets/images/bulb_white_on.png"
-          class="logo-container__image"
-        />
-        <span class="logo-container__text">D A I L Y I D E A</span>
-        <v-icon class="logo-container__icon" @click.native="close"
-          >fa-times</v-icon
-        >
+          class="logo-container__image"/>
+
       </div>
-      <v-list-item @click.native="openPage('/ideas/all')">
+      <v-list-item @click.native="openPage('/ideas/all')" v-bind:class="getClass('/ideas/all')">
         <v-list-item-content>
           <v-list-item-title>All Ideas</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
-      <v-list-item v-if="isAuthenticated" @click.native="openPage('/ideas/me')">
+      <v-list-item v-if="isAuthenticated" @click.native="openPage('/ideas/me')" v-bind:class="getClass('/ideas/me')">
         <v-list-item-content>
           <v-list-item-title>My Ideas</v-list-item-title>
         </v-list-item-content>
@@ -31,17 +29,18 @@
       <v-list-item
         v-if="isAuthenticated"
         @click.native="openPage('/ideas/liked')"
+        v-bind:class="getClass('/ideas/liked')"
       >
         <v-list-item-content>
-          <v-list-item-title>Liked Ideas</v-list-item-title>
+          <v-list-item-title>Saved Ideas</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
-      <v-list-item v-if="isAuthenticated" @click.native="openPage('/profile')">
+      <v-list-item v-if="isAuthenticated" @click.native="openPage('/profile')" v-bind:class="getClass('/profile')">
         <v-list-item-content>
           <v-list-item-title>My Profile</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
-      <v-list-item v-if="isAuthenticated" @click.native="openPage('/settings')">
+      <v-list-item v-if="isAuthenticated" @click.native="openPage('/settings')" v-bind:class="getClass('settings')">
         <v-list-item-content>
           <v-list-item-title>Settings</v-list-item-title>
         </v-list-item-content>
@@ -98,14 +97,22 @@ export default {
     },
     show() {
       this.showSideMenu = true
+    },
+    getClass(property){
+      return {
+        'active': this.$router.currentRoute.path === property,
+      }
     }
   }
 }
 </script>
 
 <style scoped lang="scss">
+.active{
+  border-left: 5px solid;
+}
 .sidebarMenu {
-  background: #4e2e62 !important;
+  background: $primary-color !important;
   z-index: 999;
 
   .logo-container {
@@ -116,8 +123,9 @@ export default {
 
     &__image {
       height: 20px;
+      float: right;
       vertical-align: top;
-      margin-right: 3px;
+      margin-right: 16px;
     }
 
     &__text {
@@ -127,8 +135,8 @@ export default {
     }
 
     &__icon {
-      margin-right: 16px;
-      float: right;
+      margin-right: 3px;
+      /*float: right;*/
       display: inline-block;
       font-size: 21px;
       vertical-align: top;

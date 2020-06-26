@@ -1,11 +1,11 @@
 <template>
   <layout>
     <div class="settings-page">
-      <v-img
-        src="~/assets/images/light_gray_lamp.png"
-        height="100"
-        contain
-      ></v-img>
+      <!--<v-img-->
+        <!--src="~/assets/images/light_gray_lamp.png"-->
+        <!--height="100"-->
+        <!--contain-->
+      <!--&gt;</v-img>-->
       <div class="settings-page__title">
         Settings
       </div>
@@ -152,6 +152,11 @@ export default {
 $main-text-color: #232323;
 .settings-page {
   @include pageMargin;
+
+  ::v-deep .v-text-field__slot input {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
 
   &__title {
     text-align: center;

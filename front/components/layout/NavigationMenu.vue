@@ -16,12 +16,12 @@
           class="logo-container__image"/>
 
       </div>
-      <v-list-item @click.native="openPage('/ideas/all')">
+      <v-list-item @click.native="openPage('/ideas/all')" v-bind:class="getClass('/ideas/all')">
         <v-list-item-content>
           <v-list-item-title>All Ideas</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
-      <v-list-item v-if="isAuthenticated" @click.native="openPage('/ideas/me')">
+      <v-list-item v-if="isAuthenticated" @click.native="openPage('/ideas/me')" v-bind:class="getClass('/ideas/me')">
         <v-list-item-content>
           <v-list-item-title>My Ideas</v-list-item-title>
         </v-list-item-content>
@@ -29,17 +29,18 @@
       <v-list-item
         v-if="isAuthenticated"
         @click.native="openPage('/ideas/liked')"
+        v-bind:class="getClass('/ideas/liked')"
       >
         <v-list-item-content>
           <v-list-item-title>Saved Ideas</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
-      <v-list-item v-if="isAuthenticated" @click.native="openPage('/profile')">
+      <v-list-item v-if="isAuthenticated" @click.native="openPage('/profile')" v-bind:class="getClass('/profile')">
         <v-list-item-content>
           <v-list-item-title>My Profile</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
-      <v-list-item v-if="isAuthenticated" @click.native="openPage('/settings')">
+      <v-list-item v-if="isAuthenticated" @click.native="openPage('/settings')" v-bind:class="getClass('settings')">
         <v-list-item-content>
           <v-list-item-title>Settings</v-list-item-title>
         </v-list-item-content>
@@ -96,12 +97,20 @@ export default {
     },
     show() {
       this.showSideMenu = true
+    },
+    getClass(property){
+      return {
+        'active': this.$router.currentRoute.path === property,
+      }
     }
   }
 }
 </script>
 
 <style scoped lang="scss">
+.active{
+  border-left: 5px solid;
+}
 .sidebarMenu {
   background: #4e2e62 !important;
   z-index: 999;

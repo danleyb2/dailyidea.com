@@ -153,6 +153,11 @@ $main-text-color: #232323;
 .settings-page {
   @include pageMargin;
 
+  ::v-deep .v-text-field__slot input {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+
   &__title {
     text-align: center;
     padding: 15px 0;

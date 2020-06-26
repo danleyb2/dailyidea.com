@@ -112,7 +112,7 @@ export default {
   border-left: 5px solid;
 }
 .sidebarMenu {
-  background: #4e2e62 !important;
+  background: $primary-color !important;
   z-index: 999;
 
   .logo-container {

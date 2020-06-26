@@ -9,14 +9,12 @@
       <!-- Back button -->
 
       <div class="logo-container">
+        <v-icon class="logo-container__icon" @click.native="close">fa-times</v-icon>
+        <span class="logo-container__text">D A I L Y I D E A</span>
         <img
           src="~/assets/images/bulb_white_on.png"
-          class="logo-container__image"
-        />
-        <span class="logo-container__text">D A I L Y I D E A</span>
-        <v-icon class="logo-container__icon" @click.native="close"
-          >fa-times</v-icon
-        >
+          class="logo-container__image"/>
+
       </div>
       <v-list-item @click.native="openPage('/ideas/all')">
         <v-list-item-content>
@@ -116,8 +114,9 @@ export default {
 
     &__image {
       height: 20px;
+      float: right;
       vertical-align: top;
-      margin-right: 3px;
+      margin-right: 16px;
     }
 
     &__text {
@@ -127,8 +126,8 @@ export default {
     }
 
     &__icon {
-      margin-right: 16px;
-      float: right;
+      margin-right: 3px;
+      /*float: right;*/
       display: inline-block;
       font-size: 21px;
       vertical-align: top;
